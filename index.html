@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>팬케이크 쌓기</title>
+<link rel="stylesheet" href="src/styles/main.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <canvas id="stage"></canvas>
+    <p class="watermark">@ccojik.dh</p>
+
+    <section class="screen" id="screen-intro">
+      <div class="screen-inner">
+        <canvas id="intro-preview" width="150" height="180"></canvas>
+        <h1 class="game-title">안 무너지게&#10;쌓으세요</h1>
+        <button class="cta" id="btn-start">시작하기</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-result" hidden>
+      <div class="screen-inner result-panel">
+        <p class="game-label">GAME OVER</p>
+        <h1 class="game-title" id="result-layers">0층</h1>
+        <p class="result-stats" id="result-stats">SCORE 0 · PERFECT 0 · BEST 0</p>
+        <button class="cta" id="btn-restart">다시 쌓기</button>
+      </div>
+    </section>
+
+    <button class="topping-btn" id="btn-topping" hidden>토핑 올리기</button>
+
+    <section class="screen" id="screen-completed" hidden>
+      <div class="screen-inner completed-panel">
+        <p class="game-label">완성했어요</p>
+        <h1 class="game-title" id="completed-layers-title">0층</h1>
+        <div class="completed-actions">
+          <button class="btn-save" id="btn-save-image">이미지 저장</button>
+          <div class="completed-actions-secondary">
+            <button class="btn-secondary" id="btn-completed-restart">다시하기</button>
+            <button class="btn-secondary" id="btn-completed-home">메인으로</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="src/game/config.js"></script>
+  <script src="src/game/sprites-data.js"></script>
+  <script src="src/game/sprites.js"></script>
+  <script src="src/game/physics.js"></script>
+  <script src="src/game/audio.js"></script>
+  <script src="src/game/renderer.js"></script>
+  <script src="src/game/export.js"></script>
+  <script src="src/game/input.js"></script>
+  <script src="src/game/play.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
